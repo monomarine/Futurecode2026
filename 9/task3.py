@@ -7,3 +7,12 @@
 
 Найти все такие числа до N.
 """
+
+n = int(input())
+for i in range(100, n + 1):
+    num = str(i)
+    summ = 0
+    for j in range(len(num)):
+        summ += (int(num[j]) ** len(num))
+    if summ == i:
+        print(f"{num} - число армстронга")
