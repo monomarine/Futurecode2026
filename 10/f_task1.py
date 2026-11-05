@@ -3,10 +3,12 @@
 которая возвращает произведение двух чисел.
 """
 
-def multiply(a, b):
-    return a * b
+def multiply(x1, x2):
+    mult = x1 * x2
+    return mult
 
-x1 = int(input())
-x2 = int(input())
+a = int(input())
+b = int(input())
 
-print(multiply(x1, x2))
+result = multiply(a, b)
+print(result)

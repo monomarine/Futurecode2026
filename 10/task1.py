@@ -6,14 +6,13 @@
 площади прямоугольника
 """
 
-def get_area_and_perimeter(a, b):
+def get_perimeter_and_area(a, b):
+    perimeter = 2 * a + 2 * b
     area = a * b
-    perimeter = a + b
-    return area, perimeter
+    return perimeter, area
 
-height = int(input("введите высоту прямоугольника"))
-weight = int(input("введите ширину прямоугольника"))
+x1 = int(input("введите значение 1 стороны"))
+x2 = int(input("введите значение 1 стороны"))
 
-a, b = get_area_and_perimeter(height, weight)
-print(f"площадь - {a}\n"
-      f"периметр - {b}\n")
+perim, area  = get_perimeter_and_area(x1, x2)
+print(perim, area)

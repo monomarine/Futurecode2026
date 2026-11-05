@@ -5,6 +5,3 @@
 
 def is_positive(num):
     return num > 0
-
-a = int(input())
-print(is_positive(a))

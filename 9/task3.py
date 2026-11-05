@@ -9,10 +9,11 @@
 """
 
 n = int(input())
-for i in range(100, n + 1):
-    num = str(i)
+
+for i in range(10, n+1):
+    exp = len(str(i))
     summ = 0
-    for j in range(len(num)):
-        summ += (int(num[j]) ** len(num))
+    for ch in str(i):
+        summ += int(ch) ** exp
     if summ == i:
-        print(f"{num} - число армстронга")
+        print(i)
