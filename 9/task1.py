@@ -6,17 +6,18 @@
 
 """
 
-ticker_number = input("введите шестизначный номер билета")
+ticket_number = input("введите шестизначный номер билета")
 
-num1 = 0
-for i in ticker_number[0:3]:
-    num1 += int(i)
+s1 = 0
+s2 = 0
 
-num2 = 0
-for i in ticker_number[3:]:
-    num2 += int(i)
+for i in ticket_number[:3]:
+    s1 += int(i)
 
-if num1 == num2:
-    print('счастливый билет')
+for i in ticket_number[3:]:
+    s2 += int(i)
+
+if s1 == s2:
+    print("счастливый билет")
 else:
-    print('не счастливый билет')
+    print("не счастливый билет")

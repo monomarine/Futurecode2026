@@ -4,3 +4,7 @@ words = ["яблоко", "кот", "программирование", "дом"]
 по длине строки (от самой короткой к длинной)
 с помощью lambda-функций.
 """
+
+words = ["яблоко", "кот", "программирование", "дом"]
+sorted_words = sorted(words, key=lambda word: len(word))
+print(sorted_words)
