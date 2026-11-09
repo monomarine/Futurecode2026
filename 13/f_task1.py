@@ -7,3 +7,13 @@
 
 На выходе программа должна вывести в консоль одно целое число - вычисленное значение .
 """
+import sys
+sys.setrecursionlimit(3000)
+n = int(input())
+
+def factorial(n):
+    if n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(n))

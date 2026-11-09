@@ -13,10 +13,9 @@
 Затем программа должна считать одну строку с клавиатуры и
 вывести три результата работы этих функций через пробел в одной строке.
 """
-is_long = lambda s: len(s) >= 5
-has_digit = lambda s: any(i.isdigit() for i in s)
-starts_with_A = lambda s: s.startswith('A')
+length_check = lambda l: len(l) > 5
+has_digit = lambda l: any(l.isdigit() for l in l)
+starts_with_A = lambda l: l.startswith('A')
 
 text = input()
-print(is_long(text), has_digit(text), starts_with_A(text))
-
+print(length_check(text), has_digit(text), starts_with_A(text))

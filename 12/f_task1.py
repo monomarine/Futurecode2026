@@ -5,10 +5,11 @@
 
 На выходе программа должна вывести в консоль одно целое число - сумму натуральных чисел от 1 до  включительно.
 """
-def rec_summ(n):
+n = int(input())
+
+def rec_sum(n):
     if n == 1:
         return 1
-    return n + rec_summ(n - 1)
+    return  n + rec_sum(n - 1)
 
-n = int(input())
-print(rec_summ(n))
+print(rec_sum(n))
