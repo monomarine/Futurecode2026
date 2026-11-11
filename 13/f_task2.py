@@ -9,14 +9,15 @@
 
 На выходе программа должна вывести в консоль одно целое число - число Фибоначчи с номером n .
 """
-from functools import  cache
+from functools import cache
 
 n = int(input())
 
 @cache
-def fibonacci(n):
+def fib(n):
     if n <= 2:
         return 1
-    return fibonacci(n - 1) + fibonacci(n - 2)
+    else:
+        return fib(n - 1) + fib(n - 2)
 
-print(fibonacci(n))
+print(fib(n))

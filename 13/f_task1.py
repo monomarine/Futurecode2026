@@ -8,7 +8,7 @@
 На выходе программа должна вывести в консоль одно целое число - вычисленное значение .
 """
 import sys
-sys.setrecursionlimit(3000)
+sys.setrecursionlimit(5000)
 n = int(input())
 
 def factorial(n):
