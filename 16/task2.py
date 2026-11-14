@@ -6,11 +6,11 @@
 и удалите из него все точки (.).
 """
 
-url = "https://github.com/monomarine?tab=repositories"
-print(url)
+url = "https://kb.cifUUUium.ru/lessons/13866/tasks/1244651"
 
-index_start = url.find("://") + 3
-index_end = url.find("/", 8)
 
-domain = url[index_start:index_end]
+start_index = url.find("://") + 3
+end_index = url.find("/", 8)
+
+domain = url[start_index:end_index].lower().replace(".", "")
 print(domain)

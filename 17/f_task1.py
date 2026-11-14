@@ -4,9 +4,11 @@
 Вычислите произведение элементов среза numbers[-2:2:-2].
 """
 
-nums = [10, 25, -3, 7, 9, 4, -8, 6, 1, 12]
-sum = 1
-for num in nums[-2:2:-2]:
-    sum *= num
+numbers = [10, 25, -3, 7, 9, 4, -8, 6, 1, 12]
+result = 1
 
-print(sum)
+for num in numbers[-2:2:-2]:
+    print(num, end=' ')
+    result *= num
+
+print("\n", result)

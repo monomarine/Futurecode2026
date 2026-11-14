@@ -1,16 +1,15 @@
 """
 Дана строка с email
-
+exmaple@gmail.com
 проверьте корректность - содержит @ (толкьо 1)
 и оканчивается на ****.com
 """
-email = input("введите корректный email домена gmail.com")
-domain = email.split("@")[-1]
+email = input("введите электронную почту для подтверждения ")
 
-if not email.count("@") == 1:
-    print("символ '@' встречается не 1 раз")
-elif not domain == "gmail.com":
-    print("домен не соответствует требованиям")
+if not email.count('@') == 1:
+    print("должен быть один символ @")
+elif not email.split('@')[1] == 'gmail.com':
+    print("почта должна быть в домене gmail.com")
 else:
-    print("email корректный")
+    print("почта принята для подтверждения")
 
