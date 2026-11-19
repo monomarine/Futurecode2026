@@ -9,18 +9,15 @@
 . Порядок следования ключей должен соответствовать порядку появления
 соответствующих символов при просмотре строки слева направо.
 """
-t = "python c++ java python."
-text = input()
-text = text.replace(".", "")
-text = text.replace("?", "")
-text = text.replace(",", "")
-text = text.replace("!", "")
+# произвольный текст
+input_text = input()
+unique_chars = {}
 
-words_count = {}
-for word in text:
-    if word in words_count: #если слово уже есть в словаре
-        words_count[word] += 1 #увеличиваем на 1
-    else: #если слово встретилось 1 раз
-        words_count[word] = 1
+for char in input_text:
+    if char in unique_chars: # если ключ есть - увеличить знач на 1
+        unique_chars[char] += 1
+    else: # если ключа нет - новое значение = 1
+        unique_chars[char] = 1
 
-print(words_count)
+
+print(unique_chars)
