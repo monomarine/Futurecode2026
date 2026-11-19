@@ -1,14 +1,21 @@
-enemyes = [100, 50, 100, 50, 10, 100, 20, 100]
+from random import randint
 
-player_power = 452
+enemies = [85,50,100,45,35,100,42]
 
-power_unit = player_power // len(enemyes)
+player_damage = randint(100,500)
 
-for i in range(len(enemyes)):
-    enemyes[i] -= power_unit
+def TakeDamage( damage):
+    global enemies
+    unit_of_damage = damage // len(enemies)
+    for i in range (len(enemies)):
+        enemies[i] -= unit_of_damage
 
-enemyes = list(filter(lambda x: x > 0, enemyes))
+    enemies = list(filter(lambda x: x > 0, enemies))
 
-print(f"после удара на каждого врага пришлось {power_unit} мощи")
-print(f"состояние врагов после атаки:")
-print(enemyes)
+count = 1
+while len(enemies) > 0:
+    print(f"игрок нанес урон на {player_damage} единиц")
+    TakeDamage( player_damage)
+    print(f"нанесен {count} удар")
+    count += 1
+    print(enemies)
